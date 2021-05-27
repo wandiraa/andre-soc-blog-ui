@@ -1,0 +1,21 @@
+<div
+  fxLayout="row"
+  fxLayout.gt-md="row"
+  fxLayout.lt-md="column"
+  fxLayoutGap="20px">
+  <div fxFlex="1 1 100%" fxLayout="column" fxLayoutGap="2rem">
+    <app-video></app-video>
+    <app-people></app-people>
+    <app-documents></app-documents>
+  </div>
+
+  <div
+    fxFlex="1 1 400px"
+    fxFlex.gt-md="1 1 400px"
+    fxFlex.lt-md="1 1 100%"
+    fxLayout="column"
+    fxLayoutGap="2rem">
+    <app-activity></app-activity>
+    <app-channels></app-channels>
+  </div>
+</div>

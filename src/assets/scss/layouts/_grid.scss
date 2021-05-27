@@ -1,0 +1,13 @@
+.main-container {
+  margin: 0 auto;
+  padding: 0 spacing(small);
+  width: auto;
+
+  @each $breakpoint, $width in $breakpoints {
+    @include media($breakpoint) {
+      // max-width: $width;
+      padding: 0 ($grid-gutter-width / 2);
+      width: $width;
+    }
+  }
+}

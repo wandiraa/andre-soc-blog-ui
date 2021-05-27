@@ -1,0 +1,21 @@
+<div class="position-relative">
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <span class="mat-headline">{{ data.title }}</span>
+  </div>
+  <div mat-dialog-content>
+    {{ data.description }}
+  </div>
+  <div mat-dialog-actions style="margin-top: 10px">
+    <div fxFlex="1 1 100%" fxLayout="row" fxLayoutAlign="end center">
+      <button
+        mat-raised-button
+        mat-dialog-close
+        (click)="closeModal()">{{ data.closeText }}</button>
+      <button
+        mat-raised-button
+        mat-dialog-close="false"
+        color="warn"
+        (click)="data.click()">{{ data.confirmText }}</button>
+    </div>
+  </div>
+</div>

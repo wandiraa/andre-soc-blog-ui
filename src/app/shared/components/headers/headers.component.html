@@ -1,0 +1,71 @@
+<header
+  class="header--container"
+  fxLayout="row"
+  fxLayoutAlign="space-between center"
+  fxLayoutGap="100px"
+  fxLayoutGap.gt-md="100px"
+  fxLayoutGap.lt-md="50px">
+
+  <div class="header--brand" fxLayout="row" fxLayoutAlign="start center">
+    <span>Social</span>
+    <span>Network</span>
+  </div>
+
+  <div class="header--content" fxLayout="row" fxLayoutAlign="start" fxLayoutGap="20px">
+    <div
+      class="header--filter"
+      fxLayout="row"
+      fxLayoutAlign="start"
+      fxLayoutAlign.gt-md="start"
+      fxLayoutAlign.lt-md="end"
+      fxLayoutGap="20px">
+      <div class="input--filter" fxLayout="row" fxLayoutAlign="start center">
+        <input
+          type="text"
+          placeholder="Find ..."
+          #searchInput
+          [matAutocomplete]="auto"
+        />
+        <i class="fas fa-search"></i>
+
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of [1, 2, 3, 4]" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </div>
+      <button class="button--upload" (click)="open()">
+        <div
+          fxLayout="row"
+          fxLayoutAlign="center center"
+          fxLayoutGap="10px"
+        >
+          <i class="fas fa-arrow-up"></i>
+          <span>Upload</span>
+        </div>
+      </button>
+    </div>
+
+    <div
+      class="header--user"
+      fxLayout="row"
+      fxLayoutAlign="start center"
+      fxLayoutGap="20px"
+      fxLayoutGap.gt-md="20px"
+      fxLayoutGap.lt-md="0">
+      <div class="header--user-avatar">
+        <i class="fas fa-user"></i>
+        <div class="badge">
+          <div fxLayout="row" fxLayoutAlign="center center">93</div>
+        </div>
+      </div>
+      <div class="header--user-identity" fxLayout="column">
+        <span>Waseem</span>
+        <span>Arshad</span>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<app-navigation [menus]="menus"></app-navigation>

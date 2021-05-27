@@ -1,0 +1,24 @@
+//-----------------------------------------------------------------------------
+//	B R E A K P O I N T S
+//
+//	Define the minimum dimensions at which the app's layout will change
+//	adapting to different screen sizes for media queries.
+//
+
+$breakpoints: (
+  // xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+) !default;
+
+$container-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+$grid-columns       : 12 !default;
+$grid-gutter-width  : 2rem !default;

@@ -1,0 +1,27 @@
+@import "src/assets/scss/abstract/functions";
+@import "src/assets/scss/abstract/mixins";
+@import "src/assets/scss/abstract/variables";
+
+.channels-container {
+  position: relative;
+
+  .channels--header {
+    padding: 20px 0;
+    border-bottom: 2px solid #EAEAEA;
+
+    .channels--title {
+      font-size: 20px;
+
+      @include media(sm) {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .channels--body {
+    padding: 20px 0;
+    border-bottom: 2px solid #EAEAEA;
+  }
+
+
+}

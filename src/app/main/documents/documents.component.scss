@@ -1,0 +1,18 @@
+@import "src/assets/scss/abstract/functions";
+@import "src/assets/scss/abstract/mixins";
+@import "src/assets/scss/abstract/variables";
+
+.document-container {
+  .document--header {
+    padding: 20px 0;
+
+    .document--title {
+      font-size: 20px;
+
+      @include media(sm) {
+        font-size: 28px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,20 @@
+<section class="document-container" fxLayout="column">
+  <div class="document--header" fxLayout="row" fxLayoutAlign="space-between center">
+    <span class="document--title">Documents</span>
+    <div
+      fxFlex="1 1 100%"
+      fxLayout="row"
+      fxLayoutAlign="center center"
+      fxLayoutAlign.gt-md="center center"
+      fxLayoutAlign.lt-md="end center">
+      <a>Browse all documents</a>
+    </div>
+  </div>
+
+  <div class="document--content">
+    <app-feed
+      [feeds]="documents"
+      type="documents"
+    ></app-feed>
+  </div>
+</section>

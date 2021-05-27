@@ -1,0 +1,16 @@
+<div class="grid-view--item" fxLayout="row" fxLayoutAlign="start end">
+  <div style="width: 100%; height: 100px;">
+    <img
+      [src]="item.imageUrl"
+      [alt]="item.name"
+      style="width: 100%; height: 100%; object-fit: contain;"
+    />
+  </div>
+<!--  <span class="grid-view&#45;&#45;text">{{ item.name }}</span>-->
+
+  <div class="grid-view--remove" (click)="onRemove(item.id)">
+    <div class="grid-view--remove-content">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+</div>

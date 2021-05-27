@@ -1,0 +1,111 @@
+@import "src/assets/scss/abstract/functions";
+@import "src/assets/scss/abstract/mixins";
+@import "src/assets/scss/abstract/variables";
+
+.feed--list {
+  display: grid;
+  grid-template-areas:
+      "first first first"
+      "seconds seconds seconds"
+      "third third third";
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
+
+  @include media(md) {
+    grid-template-areas:
+      "first first seconds"
+      "first first third";
+  }
+
+  .feed--item {
+    background-color: #f4e3cc;
+    text-align: center;
+    min-height: 145px;
+    max-height: 155px;
+    //max-height: 320px;
+    color: #742a2a;
+    position: relative;
+    cursor: pointer;
+
+    .feed--image-container {
+      height: 100%;
+    }
+
+    .feed--image {
+      width: 100%;
+      height: 100%;
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+
+    .feed--content {
+      width: 100%;
+      height: 100%;
+      background-color: #953e46;
+      color: #FAFAFA;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid;
+
+      i {
+        font-size: 32px;
+      }
+
+      .feed--text {
+        display: none !important;
+
+        @include media(md) {
+          display: flex !important;
+        }
+      }
+    }
+
+    .feed--caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 0 12px;
+      background-color: rgba(0,0,0,0.5);
+      color: #FAFAFA;
+
+      @include media(md) {
+        padding: 12px;
+      }
+
+      .feed--title {
+        text-align: left;
+        font-size: 18px;
+
+        &.feed--show {
+          display: none !important;
+        }
+      }
+
+      .feed--video {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &:first-child {
+      grid-area: first;
+      max-height: 320px;
+    }
+
+    &:nth-child(2) {
+      grid-area: seconds;
+    }
+
+    &:nth-child(3) {
+      grid-area: third;
+    }
+  }
+}

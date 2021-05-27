@@ -1,0 +1,19 @@
+<div class="channels-container">
+  <div class="channels--header" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="channels--title">Channels</div>
+
+    <div>
+      <a class="cursor--pointer">Browse all channels</a>
+    </div>
+  </div>
+
+  <div class="channels--body">
+    <app-grid-view
+      [items]="channels"
+      (remove)="onRemove($event)"
+    ></app-grid-view>
+  </div>
+
+
+</div>
+

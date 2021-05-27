@@ -1,0 +1,8 @@
+<div class="list-view" fxLayout="column" fxLayoutGap="20px">
+  <ng-container *ngFor="let item of items">
+    <app-item
+      [item]="item"
+      (remove)="onRemove($event)"
+    ></app-item>
+  </ng-container>
+</div>

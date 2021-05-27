@@ -1,0 +1,12 @@
+<div
+  class="main-navigation"
+  [ngClass]="{
+    'nav-content': isContent
+  }">
+  <ul fxLayout="row">
+    <li *ngFor="let menu of menus; last as last">
+      <a [routerLink]="menu.routeTo">{{ menu.name }}</a>
+      <span *ngIf="! last">/</span>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,18 @@
+@import "src/assets/scss/abstract/functions";
+@import "src/assets/scss/abstract/mixins";
+@import "src/assets/scss/abstract/variables";
+
+.video-container {
+  .video--header {
+    padding: 20px 0;
+
+    .video--title {
+      font-size: 20px;
+
+      @include media(sm) {
+        font-size: 28px;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,21 @@
+<div class="activity-container">
+  <div class="activity--header" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="activity--title">Activity</div>
+
+    <div>
+      <a class="cursor--pointer">View Timeline</a>
+      <span> / </span>
+      <a class="cursor--pointer">Filter activities</a>
+    </div>
+  </div>
+
+  <div class="activity--body">
+    <app-list-view
+      [items]="activities"
+      (remove)="onRemove($event)"
+    ></app-list-view>
+  </div>
+
+
+</div>
+

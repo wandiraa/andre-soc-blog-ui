@@ -1,0 +1,57 @@
+<div style="margin-bottom: 20px">
+  <span class="mat-headline">Add New Video</span>
+</div>
+<div mat-dialog-content>
+  <form
+    [formGroup]="videoForm"
+    fxLayout="column"
+    fxLayoutGap="10px"
+  >
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input
+        matInput
+        formControlName="title"
+        placeholder="Your document name" />
+      <mat-error>
+        Title is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Author</mat-label>
+      <input
+        matInput
+        formControlName="author"
+        placeholder="Your author name"
+        readonly
+      />
+      <mat-error>
+        Author is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Video</mat-label>
+      <input
+        matInput
+        formControlName="url"
+        placeholder="https://youtube.com" />
+      <mat-error>
+        Video is required
+      </mat-error>
+    </mat-form-field>
+
+    <div fxLayout="row" fxLayoutAlign="end" fxLayoutGap="10px">
+      <button
+        mat-flat-button
+        mat-dialog-close
+        color="accent">Cancel</button>
+      <button
+        mat-flat-button
+        color="primary"
+        (click)="onSave()"
+        [disabled]="videoForm.invalid">Save</button>
+    </div>
+  </form>
+</div>

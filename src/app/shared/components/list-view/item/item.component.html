@@ -1,0 +1,29 @@
+<div class="view--item" fxLayout="row" fxLayoutGap="10px">
+  <div>
+    <div class="view--image">
+      <img
+        [src]="item.imageUrl"
+        [alt]="item.status"
+        style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%;" />
+    </div>
+  </div>
+  <div class="view--content" fxLayout="column">
+    <div class="view--user" fxLayout="row" fxLayoutGap="10px">
+      <span style="font-weight: 600;">{{ item.user }}</span>
+      <small>{{ item.status }}</small>
+    </div>
+    <div class="view--description">
+      <span>{{ item.description }}</span>
+    </div>
+    <div class="view--date" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
+      <i [ngClass]="item.icon"></i>
+      <small>{{ item.date }}</small>
+    </div>
+  </div>
+
+  <div class="view-item--remove" (click)="onRemove(item.id)">
+    <div class="view-item--remove-content">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+</div>

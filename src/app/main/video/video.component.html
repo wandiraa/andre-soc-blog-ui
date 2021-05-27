@@ -1,0 +1,21 @@
+<section class="video-container" fxLayout="column">
+  <div class="video--header" fxLayout="row" fxLayoutAlign="space-between center">
+    <span class="video--title">Videos</span>
+    <div
+      fxFlex="1 1 100%"
+      fxLayout="row"
+      fxLayoutAlign="center center"
+      fxLayoutAlign.gt-md="center center"
+      fxLayoutAlign.lt-md="end center">
+      <a>Browse all videos</a>
+    </div>
+  </div>
+
+  <div class="video--content">
+    <app-feed
+      [feeds]="videos"
+      [isLabel]="false"
+      type="videos"
+    ></app-feed>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+@import "src/assets/scss/abstract/functions";
+@import "src/assets/scss/abstract/mixins";
+@import "src/assets/scss/abstract/variables";
+
+.people-container {
+  .people--header {
+    padding: 20px 0;
+
+    .people--title {
+      font-size: 20px;
+
+      @include media(sm) {
+        font-size: 28px;
+      }
+    }
+  }
+}
+

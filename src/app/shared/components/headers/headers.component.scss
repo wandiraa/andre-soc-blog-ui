@@ -1,0 +1,119 @@
+@import "src/assets/scss/abstract/functions";
+@import "src/assets/scss/abstract/mixins";
+@import "src/assets/scss/abstract/variables";
+
+header {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+
+  .header--brand {
+    span {
+      font-size: 26px;
+
+      @include media(md) {
+        font-size: 36px;
+      }
+
+      &:not(:first-child) {
+        color: #d08a88;
+      }
+    }
+  }
+
+  .header--content {
+    width: 100%;
+  }
+
+  .header--filter {
+    width: 100%;
+
+    .input--filter {
+      width: 100%;
+      position: relative;
+      display: none !important;
+
+      @include media(md) {
+        display: flex !important;
+      }
+
+      input {
+        padding: 14px 20px;
+        border-radius: 4px;
+        width: 100%;
+        outline: none;
+        border: 1px solid transparent;
+      }
+
+      i {
+        position: absolute;
+        right: 20px;
+        color: #953e46;
+      }
+    }
+
+    .button--upload {
+      width: 45px;
+      background-color: #f4e3cc;
+      color: #953e46;
+      border-radius: 4px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      @include media(md) {
+        width: 200px;
+      }
+
+      &:hover {
+        background-color: #fff1dd;
+      }
+
+      span {
+        display: none;
+
+        @include media(md) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .header--user {
+    position: relative;
+
+    .header--user-avatar {
+      width: 45px;
+      height: 45px;
+      background-color: #f4e3cc;
+      color: #953e46;
+      border-radius: 4px;
+      display: grid;
+      place-items: center;
+    }
+
+    .header--user-identity {
+      display: none !important;
+
+      @include media(md) {
+        display: flex !important;
+      }
+    }
+
+    .badge {
+      position: absolute;
+      top: -5px;
+      right: -10px;
+      background-color: #f4e3cc;
+      border-radius: 100%;
+      width: 25px;
+      height: 25px;
+      font-size: 10px;
+      color: #742a2a;
+
+      div {
+        height: 100%;
+      }
+    }
+  }
+}

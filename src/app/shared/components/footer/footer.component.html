@@ -1,0 +1,19 @@
+<footer class="main-footer">
+  <app-social-media></app-social-media>
+
+  <div class="bottom--navigation">
+    <app-navigation
+      [menus]="menusFirst"
+      [isContent]="false"
+    ></app-navigation>
+  </div>
+
+  <span>&copy; Copyright {{ date | date: 'yyyy' }} company name inc.</span>
+
+  <div class="bottom--navigation">
+    <app-navigation
+      [menus]="menusSecond"
+      [isContent]="false"
+    ></app-navigation>
+  </div>
+</footer>

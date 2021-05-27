@@ -1,0 +1,7 @@
+<div class="grid-view--list">
+  <ng-container *ngFor="let item of items">
+    <app-item-grid
+      [item]="item"
+      (remove)="onRemove($event)"></app-item-grid>
+  </ng-container>
+</div>

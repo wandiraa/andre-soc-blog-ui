@@ -1,0 +1,13 @@
+<div
+  class="social-media"
+  fxLayout="row"
+  fxLayoutAlign="start"
+  fxLayoutAlign.gt-md="start"
+  fxLayoutAlign.lt-md="center center"
+  fxLayoutGap="12px">
+  <ng-container *ngFor="let sosmed of socialMedia;">
+    <a class="social-media--item" [href]="sosmed.routeTo" target="_blank">
+      <i class="fab" [ngClass]="sosmed.icon"></i>
+    </a>
+  </ng-container>
+</div>
